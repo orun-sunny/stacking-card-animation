@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stacking Cards with Sticky Header</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Spacer to show scroll effect -->
+    <div class="spacer-top">
+      <h1 style="color: beige; text-align: center; padding-top: 50vh">
+        Scroll down to see the sticky header effect
+      </h1>
+    </div>
+
+    <!-- Container that controls header stickiness -->
+    <div class="cards-section-container">
+      <header id="main-header">
+        <div>
+          <h1>Stacking Cards Animation</h1>
+          <p>Scroll down to stack the cards. Scroll back up to unstack them.</p>
+        </div>
+      </header>
+
+      <main>
+        <ul id="cards">
+          <li class="card" id="card-1">
+            <div class="card-content">
+              <div>
+                <h2>Card One</h2>
+                <p>
+                  This is the content of card one. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit.
+                </p>
+              </div>
+              <figure>
+                <img
+                  src="https://assets.codepen.io/210284/flower-9.jpg"
+                  alt="card-one"
+                />
+              </figure>
+            </div>
+          </li>
+          <li class="card" id="card-2">
+            <div class="card-content">
+              <div>
+                <h2>Card Two</h2>
+                <p>
+                  This is the content of card two. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit.
+                </p>
+              </div>
+              <figure>
+                <img
+                  src="https://assets.codepen.io/210284/flower-8.jpg"
+                  alt="card two"
+                />
+              </figure>
+            </div>
+          </li>
+          <li class="card" id="card-3">
+            <div class="card-content">
+              <div>
+                <h2>Card Three</h2>
+                <p>
+                  This is the content of card three. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit.
+                </p>
+              </div>
+              <figure>
+                <img
+                  src="https://assets.codepen.io/210284/flower-7.jpg"
+                  alt="card three"
+                />
+              </figure>
+            </div>
+          </li>
+          <li class="card" id="card-4">
+            <div class="card-content">
+              <div>
+                <h2>Card Four</h2>
+                <p>
+                  This is the content of card four. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit.
+                </p>
+              </div>
+              <figure>
+                <img
+                  src="https://assets.codepen.io/210284/flower-6.jpg"
+                  alt="card four"
+                />
+              </figure>
+            </div>
+          </li>
+        </ul>
+      </main>
+    </div>
+
+    <!-- Spacer to show end of scroll effect -->
+    <div class="spacer-bottom">
+      <h1 style="color: beige; text-align: center; padding-top: 50vh">
+        Header is gone - End of stacking section
+      </h1>
+    </div>
+  </body>
+</html>
