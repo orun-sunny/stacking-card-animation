@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<section>
+  <div>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stacking Cards with Sticky Header</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+  </div>
+
+  <div>
     <!-- Spacer to show scroll effect -->
     <div class="spacer-top">
-      <h1 style="color: beige; text-align: center; padding-top: 50vh">
+      <h1 style="text-align: center; padding-top: 50vh">
         Scroll down to see the sticky header effect
       </h1>
     </div>
 
     <!-- Container that controls header stickiness -->
     <div class="cards-section-container">
-      <header id="main-header">
+      <h1 id="main-header">
         <div>
           <h1>Stacking Cards Animation</h1>
           <p>Scroll down to stack the cards. Scroll back up to unstack them.</p>
         </div>
-      </header>
+      </h1>
 
-      <main>
+      <div class="main">
         <ul id="cards">
           <li class="card" id="card-1">
             <div class="card-content">
@@ -94,14 +95,31 @@
             </div>
           </li>
         </ul>
-      </main>
+      </div>
     </div>
 
     <!-- Spacer to show end of scroll effect -->
     <div class="spacer-bottom">
-      <h1 style="color: beige; text-align: center; padding-top: 50vh">
+      <h1 style="color: black; text-align: center; padding-top: 100vh">
         Header is gone - End of stacking section
       </h1>
     </div>
-  </body>
-</html>
+    <script>
+      const header = document.getElementById("main-header");
+      const card4 = document.getElementById("card-4");
+      const headerHeight = header.offsetHeight;
+
+      window.addEventListener("scroll", () => {
+        const cardTop = card4.getBoundingClientRect().top;
+
+        // When card-4 starts getting close to top, scroll header up gradually
+        if (cardTop <= headerHeight) {
+          const offset = Math.min(headerHeight, headerHeight - cardTop);
+          header.style.transform = `translateY(-${offset}px)`;
+        } else {
+          header.style.transform = `translateY(0)`;
+        }
+      });
+    </script>
+  </div>
+</section>
